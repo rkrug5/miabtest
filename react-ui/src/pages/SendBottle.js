@@ -5,7 +5,7 @@ import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 import Alert from "../components/Alert";
 
-class Search extends Component {
+class SendBottle extends Component {
   state = {
     search: "",
     breeds: [],
@@ -37,4 +37,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default SendBottle;
