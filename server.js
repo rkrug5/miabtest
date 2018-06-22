@@ -22,7 +22,7 @@ if (cluster.isMaster) {
 	const app = express();
 
 	// Priority serve any static files.
-	app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+	app.use(express.static(path.resolve(__dirname, 'react-ui/build')));
 
 	// Answer API requests.
 	app.get('/api', function (req, res) {

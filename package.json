@@ -1,20 +1,28 @@
 {
-	"name": "miabtest",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@google-cloud/translate": "^1.1.0",
-		"axios": "^0.18.0",
-		"react": "^16.4.1",
-		"react-bootstrap": "^0.32.1",
-		"react-dom": "^16.4.1",
-		"react-router-dom": "^4.3.1",
-		"react-scripts": "1.1.4"
-	},
+	"name": "mern",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
+		"start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+		"start:prod": "node server.js",
+		"start:dev": "concurrently \"nodemon --ignore 'react-ui/*'\" \"npm run client\"",
+		"client": "cd react-ui && npm run start",
+		"seed": "node scripts/seedDB.js",
+		"install": "cd react-ui && yarn install",
+		"build": "cd react-ui && npm run build"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^3.5.0",
+		"nodemon": "^1.11.0"
+	},
+	"dependencies": {
+		"axios": "^0.16.2",
+		"body-parser": "^1.17.2",
+		"express": "^4.15.4",
+		"mongoose": "^5.0.17",
+		"if-env": "^1.0.4"
 	}
 }
