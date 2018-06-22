@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Login from "./pages/Login";
 import Saved from "./pages/Saved";
+import Signup from "./pages/Signup";
 
 const App = () => (
   <Router>
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path="/discover" component={Discover} />
         <Route exact path="/sendbottle" component={SendBottle} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
         <Route exact path="/saved" component={Saved} />
 
       </Wrapper>
