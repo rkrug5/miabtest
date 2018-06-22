@@ -10,8 +10,7 @@
 		"client": "cd react-ui && npm run start",
 		"seed": "node scripts/seedDB.js",
 		"install": "cd react-ui && yarn install",
-		"build": "cd react-ui && npm run build",
-		"heroku-postbuild": "npm run build"
+		"build": "cd react-ui && npm run build"
 	},
 	"author": "",
 	"license": "ISC",
