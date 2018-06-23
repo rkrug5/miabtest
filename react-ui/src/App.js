@@ -9,6 +9,7 @@ import Wrapper from "./components/Wrapper";
 import Login from "./pages/Login";
 import Saved from "./pages/Saved";
 import Signup from "./pages/Signup";
+import Landing from "./pages/Landing";
 
 const App = () => (
   <Router>
@@ -19,7 +20,7 @@ const App = () => (
         <Route exact path="/about" component={About} />
         <Route exact path="/discover" component={Discover} />
         <Route exact path="/sendbottle" component={SendBottle} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/login" component={Landing} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/saved" component={Saved} />
 
