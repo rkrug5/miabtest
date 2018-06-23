@@ -23,16 +23,16 @@ const Navbar = props => (
           </Link>
         </li>
         <li
-          //className={
-           // window.location.pathname === "/discover"
-            //  ? "nav-item active"
-            //  : "nav-item"
-        //  }
-      //>
-        //  <Link to="/discover" className="nav-link">
-          //  Discover
-          //</Link>
-        //</li>
+          className={
+            window.location.pathname === "/discover"
+              ? "nav-item active"
+              : "nav-item"
+          }
+      >
+          <Link to="/discover" className="nav-link">
+            Discover
+          </Link>
+        </li>
          
         className={
            window.location.pathname === "/login"
@@ -40,11 +40,11 @@ const Navbar = props => (
               : "nav-item"
          }
         >
-          //<Link to="/Login" className="nav-link">
-            //Login
-          //</Link>
-        //</li>
-        //<li
+          <Link to="/Login" className="nav-link">
+            Login
+          </Link>
+        </ul>
+        <li
           className={
             window.location.pathname === "/signup"
               ? "nav-item active"
@@ -56,33 +56,32 @@ const Navbar = props => (
           </Link>
         </li>
         <li
-          //className={
-            //window.location.pathname === "/sendbottle"
-              //? "nav-item active"
-              //: "nav-item"
-          //}
-        //>
-          //<Link to="/sendbottle" className="nav-link">
-            //Send Message
-          //</Link>
+          className={
+            window.location.pathname === "/sendbottle"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/sendbottle" className="nav-link">
+            Send Message
+          </Link>
 
 
-       // </li>
+       </li>
 
-       // <li
-         // className={
-           // window.location.pathname === "/saved"
-             // ? "nav-item active"
-              //: "nav-item"
-          //}
+        <li
+          className={
+            window.location.pathname === "/saved"
+              ? "nav-item active"
+              : "nav-item"
+          }
         >
           <Link to="/saved" className="nav-link">
            View Saved
           </Link>
         </li>
-      </ul>
-    </div>
-  </nav>
+      </div>
+    </nav>
 
 );
 
