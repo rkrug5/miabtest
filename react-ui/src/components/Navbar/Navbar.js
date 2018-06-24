@@ -33,26 +33,18 @@ const Navbar = props => (
             Discover
           </Link>
         </li>
-<<<<<<< HEAD
         <li
           className={
             window.location.pathname === "/sendbottle"
               ? "nav-item active"
               : "nav-item"
           }
-=======
-
-        <li className={
-          window.location.pathname === "/login"
-            ? "nav-item active"
-            : "nav-item"
-        }
->>>>>>> f5187b0c4e605dca6e195a37ff40c049ef731b46
         >
           <Link to="/sendbottle" className="nav-link">
-            Send Message
+            Send Bottle
           </Link>
         </li>
+
         <li
           className={
             window.location.pathname === "/saved"
@@ -89,7 +81,7 @@ const Navbar = props => (
       </ul>
 
     </div>
-  </nav>
+  </nav >
 
 );
 
