@@ -23,7 +23,9 @@ html, body {
   
   #landing #leftpanel p {
 	position: relative;
-	z-index: 3;
+  z-index: 3;
+  font-size: 20px;
+  color: black;
   }
 
 

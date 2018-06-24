@@ -19,7 +19,6 @@ export default class Landing extends Component {
 			isLoading: false,
 			email: "",
 			password: "",
-			confirmPassword: "",
 			newUser: null
 		};
 	}
@@ -32,8 +31,7 @@ export default class Landing extends Component {
 	validateForm() {
 		return (
 			this.state.email.length > 0 &&
-			this.state.password.length > 0 &&
-			this.state.password === this.state.confirmPassword
+			this.state.password.length > 0
 		);
 	}
 
@@ -78,10 +76,8 @@ export default class Landing extends Component {
 
 						<div id="landingImage" className="fullh">
 						</div>
-						<p>This is some stuff!!!</p>
-						<p>This is some stuff!!!</p>
-						<p>This is some stuff!!!</p>
-						<p>This is some stuff!!!</p>
+						<p><b>Who Knows What Messages You Might Find!</b></p>
+
 
 					</div>
 
@@ -104,22 +100,14 @@ export default class Landing extends Component {
 									type="password"
 								/>
 							</FormGroup>
-							<FormGroup controlId="confirmPassword" bsSize="large">
-								<ControlLabel>Confirm Password</ControlLabel>
-								<FormControl
-									value={this.state.confirmPassword}
-									onChange={this.handleChange}
-									type="password"
-								/>
-							</FormGroup>
 							<LoaderButton
 								block
 								bsSize="large"
 								disabled={!this.validateForm()}
 								type="submit"
 								isLoading={this.state.isLoading}
-								text="Signup"
-								loadingText="Signing up…"
+								text="Login"
+								loadingText="Logging In…"
 							/>
 						</form>
 
