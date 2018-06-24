@@ -1,0 +1,46 @@
+html, body {
+
+	height: 100%;
+}
+
+#landing,
+#landing .fullh {
+  height: 100%;
+}
+
+#landing > div > div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+  }
+  
+  #landing #leftpanel {
+	padding: 0;
+	position: relative;
+	text-align: center;
+  }
+  
+  #landing #leftpanel p {
+	position: relative;
+	z-index: 3;
+  }
+
+
+
+#landing #landingImage {
+
+position: absolute; 
+  top: 0;
+  left: 0;
+  background: transparent 
+  url(/images/bottlesunset.jpg) center center;
+  opacity: 1;
+  width: 100%;
+  z-index: 1;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+
+}
+
+
