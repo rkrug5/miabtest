@@ -35,6 +35,28 @@ const Navbar = props => (
         </li>
         <li
           className={
+            window.location.pathname === "/sendbottle"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/sendbottle" className="nav-link">
+            Send Message
+          </Link>
+        </li>
+        <li
+          className={
+            window.location.pathname === "/saved"
+              ? "nav-item active"
+              : "nav-item"
+          }
+        >
+          <Link to="/saved" className="nav-link">
+            View Saved
+          </Link>
+        </li>
+        <li
+          className={
             window.location.pathname === "/login"
               ? "nav-item active"
               : "nav-item"
@@ -53,31 +75,6 @@ const Navbar = props => (
         >
           <Link to="/Signup" className="nav-link">
             Sign Up
-          </Link>
-        </li>
-        <li
-          className={
-            window.location.pathname === "/sendbottle"
-              ? "nav-item active"
-              : "nav-item"
-          }
-        >
-          <Link to="/sendbottle" className="nav-link">
-            Send Message
-          </Link>
-
-
-        </li>
-
-        <li
-          className={
-            window.location.pathname === "/saved"
-              ? "nav-item active"
-              : "nav-item"
-          }
-        >
-          <Link to="/saved" className="nav-link">
-            View Saved
           </Link>
         </li>
       </ul>
