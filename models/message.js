@@ -1,38 +1,23 @@
-module.exports = function (sequelize, DataTypes) {
-	var Message = sequelize.define("Message", {
-		// Giving the Author model a name of type STRING
-		body: {
-			type: DataTypes.STRING,
-			allowNull: false,
-			validate: {
-				len: [1]
-			}
-		},
-		reported: {
-			type: DataTypes.BOOLEAN,
-			allowNull: false,
-			defaultValue: false
-		},
-		brinyDeeps: {
-			type: DataTypes.BOOLEAN,
-			allowNull: false,
-			defaultValue: false
-		},
-		seenCount: {
-			type: DataTypes.INTEGER,
-			allowNull: false
+var mongoose = require("mongoose");
 
-		}
+// Save a reference to the Schema constructor
+var Schema = mongoose.Schema;
 
 
-	});
-	Message.associate = function (models) {
-		// Associating Author with Posts
-		// When an Author is deleted, also delete any associated Posts
-		Message.belongsTo(models.User, { as: 'Sender' });
-		Message.belongsTo(models.User, { as: 'Keeper' });
-		Message.belongsToMany(models.SeenMessages, { as: 'Message' });
-	};
+// Using the Schema constructor, create a new NoteSchema object
+// This is similar to a Sequelize model
+var MessageSchema = new Schema({
+	// `title` must be of type String
+	title: String,
+	// `body` must be of type String
+	body: String,
+	reported: Boolean,
+	briny_deeps: Boolean,
+	seen_count: Number
+});
 
-	return Message;
-};
+// This creates our model from the above schema, using mongoose's model method
+var Message = mongoose.model("Message", MessageSchema);
+
+// Export the Note model
+module.exports = Message;
