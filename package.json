@@ -24,6 +24,7 @@
 		"express": "^4.15.4",
 		"if-env": "^1.0.4",
 		"mdbreact": "^4.5.0",
-		"mongoose": "5.1.6"
+		"mongoose": "5.1.6",
+		"store": "2.0.12"
 	}
 }

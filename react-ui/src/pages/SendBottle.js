@@ -9,6 +9,7 @@ import { TextArea } from "../components/Form/TextArea";
 import { FormBtn } from "../components/Form/FormBtn";
 import { List } from "../components/List/List";
 import { ListItem } from "../components/List/ListItem";
+const store = require('store');
 
 
 
@@ -21,6 +22,13 @@ class SendBottle extends Component {
   };
   componentDidMount() {
     this.loadMessages();
+    if (store.get('bottle')) {
+      let bottle = store.get('bottle')
+      this.setState({
+        title: bottle.title,
+        message: bottle.message
+      });
+    }
   }
   loadMessages = () => {
     API.getMessages()
@@ -42,6 +50,10 @@ class SendBottle extends Component {
     this.setState({
       [name]: value
     });
+    store.set('bottle', {
+      title: this.state.title,
+      message: this.state.message
+    });
   };
 
 
@@ -52,7 +64,8 @@ class SendBottle extends Component {
         title: this.state.title,
         message: this.state.message
       })
-        .then(res => this.loadMessages())
+        .then(res => this.loadMessages(),
+          store.clearAll())
         .catch(err => console.log(err));
     }
   };

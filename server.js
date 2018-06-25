@@ -32,7 +32,7 @@ app.listen(PORT, function () {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/messagesinbottles");
 
 
 //hey, this is a comment
